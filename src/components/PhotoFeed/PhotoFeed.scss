@@ -1,0 +1,19 @@
+@import "../../assets/scss/abstracts/mixins";
+@import "../../assets/scss/abstracts/variables";
+
+.photo-feed {
+    margin: 45px auto;
+    &__items {
+        @include d-flex(flex-start, flex-start, wrap);
+    }
+    &__card {
+        max-width: calc((100% / 3) - 50px);
+        box-sizing: border-box;
+        border: 2px solid $main-color;
+        border-radius: 6px;
+        margin: 0 25px;
+        &-picture {
+            width: 100%;
+        }
+    }
+}

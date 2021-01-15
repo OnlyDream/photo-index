@@ -139,7 +139,13 @@ table {
 }
 
 body {
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Nunito", sans-serif;
     background-color: $main-light-dark;
     color: white;
+    font-size: $base-font-size;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }

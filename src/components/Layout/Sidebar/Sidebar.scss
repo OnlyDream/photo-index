@@ -1,0 +1,89 @@
+@import "../../../assets/scss/abstracts/mixins";
+@import "../../../assets/scss/abstracts/variables";
+
+.sidebar {
+    width: 250px;
+    background-color: $main-dark;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    &__profile {
+        margin: 25px 0;
+        @include d-flex(center, center, wrap);
+        &-image {
+            width: 100%;
+            text-align: center;
+            img {
+                width: 85px;
+                border-radius: 100%;
+                padding: 4px;
+                border: 2px solid $highlight-color;
+            }
+            margin: 0 0 15px;
+        }
+        &-name {
+            width: 100%;
+            text-align: center;
+            margin: 0 0 5px;
+            font-size: $big-font-size;
+        }
+        &-username {
+            font-size: $little-font-size;
+            color: $light-grey;
+        }
+    }
+    &__stats {
+        margin: 0 15px;
+        width: calc(100% - 30px);
+        @include d-flex(flex-start, center, wrap);
+        &-item {
+            flex: 1;
+            @include d-flex(flex-start, center, wrap);
+            &-number {
+                width: 100%;
+                text-align: center;
+                margin: 0 0 5px;
+            }
+            &-text {
+                font-size: $small-font-size;
+                width: 100%;
+                text-align: center;
+                color: $light-grey;
+            }
+        }
+    }
+    &__nav {
+        margin: 50px 35px;
+        &-item {
+            $parent: &;
+            margin: 20px 0;
+            display: flex;
+            width: 100%;
+
+            &-icon {
+                margin: 0 20px 0 0;
+                color: $main-color;
+            }
+            &-text {
+                width: 100%;
+                @include d-flex(space-between);
+                &--number {
+                    font-size: $small-font-size;
+                    color: $light-grey;
+                }
+            }
+            &--active {
+                color: $highlight-color;
+                #{$parent}-icon {
+                    color: $highlight-color;
+                }
+            }
+        }
+    }
+    &__separator {
+        position: relative;
+        background-color: #393b44;
+        height: 1px;
+        margin: 30px 0;
+    }
+}
